@@ -7,6 +7,3 @@ Forged Thoughts is a modeling and rendering (programming) language and is curren
 
 ![pic](main.png)
 
-# Installation
-
-Forged Thoughts can be installed
