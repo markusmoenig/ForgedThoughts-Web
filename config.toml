@@ -1,6 +1,6 @@
-baseURL = 'https://forgedthoughts.com/'
+baseURL = 'https://forgedthoughts.com'
 languageCode = 'en-us'
-title = 'ForgedThoughts - 3D Modeling & Rendering Language'
+title = 'ForgedThoughts - Modeling & Rendering Language'
 
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-relearn"
@@ -11,9 +11,15 @@ home = [ "HTML", "RSS", "SEARCH"]
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
-identifier = "ds"
+identifier = "gh"
 url = "https://github.com/markusmoenig/ForgedThoughts"
-weight = 10
+weight = 1
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-fw fa-discord'></i> Discord"
+identifier = "di"
+url = "https://discord.gg/KKteWArT"
+weight = 2
 
 [params]
   # This controls whether submenus will be expanded (true), or collapsed (false) in the
