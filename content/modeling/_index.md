@@ -1,6 +1,7 @@
 +++
 archetype = "chapter"
 title = "Modeling"
+alwaysopen = false
 weight = 2
 +++
 

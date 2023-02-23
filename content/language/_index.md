@@ -1,6 +1,7 @@
 +++
 archetype = "chapter"
 title = "Language Reference"
+alwaysopen = false
 weight = 4
 +++
 
