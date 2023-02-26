@@ -13,4 +13,4 @@ A list of people without whom this project would not be possible:
 
 * The Disney BSDF path tracer in Forged Thoughts (coming soon) is based on [GLSL-PathTracer](https://github.com/knightcrawler25/GLSL-PathTracer) from [Asif](https://twitter.com/knightcrawler25).
 
-* [Rhai.rs](https://rhai.rs), the excellent scripting language Forged Thoughts is based on.
+* [Rhai.rs](https://rhai.rs), the excellent language Forged Thoughts is based on.
