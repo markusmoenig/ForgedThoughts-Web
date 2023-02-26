@@ -49,4 +49,9 @@ let v = Cone(2.0, 1.5, 0.5);            // Cone of height 2.0 and r1 = 1.5 and r
 v.height = 0.5;                         // Changing values later
 v1.r1 = 0.8;
 v.r2 = 0.1;
+
+// Ellipsoid
+let v = Ellipsoid();                    // Create an ellipsoid with a size of F3(1.0, 1.0, 1.0)
+let v = Ellipsoid(F3(0.1, 0.2, 0.2));   // Create an ellipsoid with a custom size
+v.size.x += 2.0;                        // Change the size later
 ```

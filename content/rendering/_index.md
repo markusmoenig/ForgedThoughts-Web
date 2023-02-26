@@ -5,4 +5,4 @@ weight = 3
 alwaysopen = false
 +++
 
-Lorem Ipsum.
+An overview of everyting rendering related.
