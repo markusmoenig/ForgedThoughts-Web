@@ -3,4 +3,42 @@ title: "Modifiers"
 weight: 3
 ---
 
-Use modifiers to modify shapes.
+You can modify shapes in a lot of different ways. Some modifiers are built into the Forged Thoughts language itself, others you can program yourself.
+
+Here we discuss all the modification tools available.
+
+## Twist
+
+You can twist a shape around an axis using it's twist property.
+
+For example
+
+```rust
+let box = Box(F3(0.5, 1.5, 0.5));
+box.twist.y = 1.0;
+
+settings.step_size = 0.5;
+```
+
+will twist a box along the Y-axis and will look something like this:
+
+![Twist](twist.png)
+
+Note that we reduced the step_size of the ray-marching in the global settings structure. The Twist operator distorts the distance field and because of this we need to shorten the ray step size.
+
+## Mirror
+
+You can mirror shapes along the x, y or z axis.
+
+For example
+
+```rust
+let sphere = Sphere();
+
+sphere.position.x += 0.5;
+sphere.mirror.x = true;
+```
+
+will mirror the sphere at the x-axis. ```sphere.mirror``` is ```B3```, a vector of 3 booleans.
+
+![Mirror](mirror.png)
