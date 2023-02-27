@@ -19,6 +19,7 @@ The overall project goals are:
 * Provide an easy but powerful syntax to model and render SDFs without any limitations.
 * Access to all SDF modeling primitives, modifiers and tricks (In progress).
 * Various integrated renderers (TODO)
+* Share objects and materials via an integrated database (TODO)
 * Model and work with 2D SDFs and Text as an overlay to the 3D layer (TODO)
 * Terrain (TODO)
 * Physics (TODO)
