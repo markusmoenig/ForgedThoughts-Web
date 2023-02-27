@@ -52,7 +52,7 @@ eyes.position.x = F3(0.07, -0.03, 0.3);
 eyes.mirror.x = true;
 helmet -= eyes;
 
-// Node and mouth
+// Nose and mouth
 
 let cut = Box(F3(0.07, 0.2, 0.1));
 cut.position.y -= 0.25;
