@@ -44,7 +44,7 @@ sphere1 += Groove(sphere2, 0.08, 0.2);
 
 ![Groove Add](add_groove.png)
 
-The first argument defines the height of the groove and with the second you can model its width.
+The first argument defines the height of the groove and with the second you can model its width. The groove operator is a very useful tool for adding detail.
 
 ## Subtraction
 

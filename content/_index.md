@@ -18,7 +18,9 @@ The overall project goals are:
 * CPU based rather than GPU based. All computation is done in 64-bit.
 * Provide an easy but powerful syntax to model and render SDFs without any limitations.
 * Access to all SDF modeling primitives, modifiers and tricks (In progress).
-* Various integrated renderers (TODO)
+* Various integrated renderers (TODO)\
+* Animation( TODO)
+* Object hierarchies by including sub-class scripts (TODO)
 * Share objects and materials via an integrated database (TODO)
 * Model and work with 2D SDFs and Text as an overlay to the 3D layer (TODO)
 * Terrain (TODO)
