@@ -20,7 +20,12 @@ v.position.x += -2;
 ## Modifiers
 
 ```rust
-v.rounding = 1.0;                       // Rounding of the SDF shape
+v.rounding = 0.2;                       // Rounding of the SDF shape
+
+v.mirror.x = true;                      // Mirror on the x-axis
+v.mirror = B3(true, false, false);      // Same as above
+
+v.visible = false;                      // Mark an SDF as invisible
 ```
 
 ## Available 3D SDFs

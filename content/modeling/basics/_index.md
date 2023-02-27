@@ -36,7 +36,7 @@ Would subtract sphere2 from sphere1.
 
 In this case *sphere2* will not be rendered anymore as a standalone top-level object. However you can use *sphere2* by modifying it and subtracting or adding it to other objects.
 
-Read more in the [Booleans](../booleans/) chapter.
+There are many more boolean operations available and they can also support optional smoothing between the shapes. Read more in the [Booleans](../booleans/) chapter.
 
 ## Copying
 
