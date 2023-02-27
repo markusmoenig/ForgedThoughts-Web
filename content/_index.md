@@ -9,14 +9,19 @@ Forged Thoughts is a modeling and rendering *programming* language. It is open s
 
 # Goals
 
-Forged Thoughts strives to create high-quality distance field models for rendering and poligonization. It utilizes multi-threaded CPU based rendering prevent the limitations of SDFs on the GPU. The focus is on quality, rather than speed.
+Forged Thoughts strives to create high-quality distance field models for rendering and poligonization. It utilizes multi-threaded CPU based rendering in 64-bit to prevent the limitations of SDFs on the GPU. The focus is on quality, rather than speed.
 
 The overall project goals are:
 
 * Create signed distance fields for rendering and poligonization.
 * Focus is on quality rather than speed (although all example render in just a few hundred ms on my machine).
-* CPU based rather than GPU based.
+* CPU based rather than GPU based. All computation is done in 64-bit.
 * Provide an easy but powerful syntax to model and render SDFs without any limitations.
+* Access to all SDF modeling primitives, modifiers and tricks (In progress).
+* Various integrated renderers (TODO)
+* Model and work with 2D SDFs and Text as an overlay to the 3D layer (TODO)
+* Terrain (TODO)
+* Physics (TODO)
 
 # License
 
