@@ -78,3 +78,7 @@ helmet += Groove(stripe, 0.01, 0.02);
 # License
 
 Forged Thoughts is licensed under the MIT.
+
+# Sponsors
+
+None yet

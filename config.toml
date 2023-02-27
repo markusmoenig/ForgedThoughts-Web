@@ -26,6 +26,12 @@ name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
 url = "more/credits/"
 weight = 3
 
+[[menu.shortcuts]]
+name = "<i class='fab fa-fw fa-twitter'></i> Twitter"
+identifier = "tw"
+url = "https://twitter.com/MarkusMoenig"
+weight = 4
+
 [params]
   # This controls whether submenus will be expanded (true), or collapsed (false) in the
   # menu; if no setting is given, the first menu level is set to false, all others to true;
