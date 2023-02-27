@@ -42,7 +42,6 @@ helmet.material.rgb = F3("9F6F4A");
 let cut_out = helmet.copy();
 cut_out.position.y -= 0.04;
 cut_out.scale = 0.98;
-
 helmet -= cut_out;
 
 // Eye holes
@@ -64,8 +63,14 @@ modifier.frequency = 10.0;
 modifier.amplitude = 0.7;
 modifier.addend = 1.0;
 cut.modifier = modifier;
-
 helmet -= cut;
+
+// Stripe
+
+let stripe = Box(F3(0.011, 0.17, 0.2));
+stripe.position.y = 0.16;
+stripe.position.z = 0.2;
+helmet += Groove(stripe, 0.01, 0.02);
 ```
 
 # License

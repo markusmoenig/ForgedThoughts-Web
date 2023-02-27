@@ -3,7 +3,7 @@ title: "Booleans"
 weight: 2
 ---
 
-Use booleans to merge, subtract and intersect shapes with each other.
+Use booleans to merge, subtract and intersect shapes with each other. These boolean operations come with quite a few options and operators.
 
 ## Addition
 
@@ -23,16 +23,28 @@ sphere1 += sphere2;
 
 The shape on the right is added to the shape on the left. This is actually the default operation for shapes, however you will need it when you want two add two shapes and then for example subtract them from another shape (together).
 
+### Smoothing
 
-You can also add a smooth factor by replacing the addition with this code:
+You can also add a smooth factor by adding a ```Smooth``` operator:
 
 ```rust
 sphere1 += Smooth(sphere2, 0.2);
 ```
-
 ![Smooth Add](add_smooth.png)
 
 The higher the smoothing factor the smoother and larger the shapes will become.
+
+### Groove
+
+Another operator is ```Groove``` which adds a positive groove to sphere1 where it intersects sphere2:
+
+```rust
+sphere1 += Groove(sphere2, 0.08, 0.2);
+```
+
+![Groove Add](add_groove.png)
+
+The first argument defines the height of the groove and with the second you can model its width.
 
 ## Subtraction
 
@@ -43,6 +55,8 @@ sphere1 -= sphere2;
 ```
 
 ![Subtract](subtract.png)
+
+### Smoothing
 
 And with a smoothing factor applied:
 
@@ -64,7 +78,9 @@ sphere1 &= sphere2;
 
 ![Intersection](intersection.png)
 
-and with smoothing:
+### Smoothing
+
+And with smoothing:
 
 ```rust
 sphere1 &= Smooth(sphere2, 0.2);
