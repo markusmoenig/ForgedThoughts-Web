@@ -7,9 +7,18 @@ Forged Thoughts is a modeling and rendering *programming* language. It is open s
 
 ![pic](main.png)
 
-# Goals
 
 Forged Thoughts strives to create high-quality distance field models for rendering and poligonization. It utilizes multi-threaded CPU based rendering in 64-bit to prevent the limitations of SDFs on the GPU. The focus is on quality, rather than speed.
+
+# Features
+
+* Easy to use programming language with special modeling functionality.
+* Inbuild renderer for Phong, PBR and a full featured BSDF pathtracer.
+* Polygonization of models (OBJ).
+* 64-bit heavily multi-threaded ray-marcher running on the CPU.
+* Access to all SDF modeling primitives, modifiers and tricks (In progress).
+
+# Goals
 
 The overall project goals are:
 
@@ -17,8 +26,6 @@ The overall project goals are:
 * Focus is on quality rather than speed (although all example render in just a few hundred ms on my machine).
 * CPU based rather than GPU based. All computation is done in 64-bit.
 * Provide an easy but powerful syntax to model and render SDFs without any limitations.
-* Access to all SDF modeling primitives, modifiers and tricks (In progress).
-* Various integrated renderers (TODO)\
 * Animation( TODO)
 * Object hierarchies by including sub-class scripts (TODO)
 * Share objects and materials via an integrated database (TODO)
@@ -78,6 +85,8 @@ helmet += Groove(stripe, 0.01, 0.02);
 # License
 
 Forged Thoughts is licensed under the MIT.
+
+Unless explicitly stated otherwise, any contribution intentionally submitted for inclusion in Forged Thoughts, shall be MIT licensed as above, without any additional terms or conditions.
 
 # Sponsors
 

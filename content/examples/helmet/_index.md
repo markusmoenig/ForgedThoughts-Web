@@ -25,14 +25,12 @@ helmet -= cut_out;
 // Eye holes
 
 let eyes = Ellipsoid();
-eyes.size = F3(0.10, 0.03, 0.1);
-eyes.position.x = 0.07;
-eyes.position.y -= 0.03;
-eyes.position.z = 0.3;
+eyes.size = F3(0.11, 0.03, 0.1);
+eyes.position = F3(0.06, -0.03, 0.3);
 eyes.mirror.x = true;
 helmet -= eyes;
 
-// Node and mouth
+// Nose and mouth
 
 let cut = Box(F3(0.07, 0.2, 0.1));
 cut.position.y -= 0.25;
@@ -43,6 +41,12 @@ modifier.frequency = 10.0;
 modifier.amplitude = 0.7;
 modifier.addend = 1.0;
 cut.modifier = modifier;
-
 helmet -= cut;
+
+// Stripe
+
+let stripe = Box(F3(0.011, 0.17, 0.2));
+stripe.position.y = 0.16;
+stripe.position.z = 0.2;
+helmet += Groove(stripe, 0.01, 0.02);
 ```
