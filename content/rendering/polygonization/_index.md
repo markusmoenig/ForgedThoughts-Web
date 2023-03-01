@@ -1,6 +1,6 @@
 ---
 title: "Polygonization"
-weight: 2
+weight: 3
 ---
 
 If you do not want to render the scene to an image but would rather triangulate it. Use the ```polygonize``` command for *ftc*.
