@@ -1,6 +1,6 @@
 ---
 title: "Raymarching"
-weight: 4
+weight: 3
 ---
 
 With Forged Thoughts you create distance fields using [signed distance functions](https://en.wikipedia.org/wiki/Signed_distance_function) (or in short SDFs) and use [raymarching](https://en.wikipedia.org/wiki/Ray_marching) to traverse them.

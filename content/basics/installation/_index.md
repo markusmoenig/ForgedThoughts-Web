@@ -1,5 +1,5 @@
 ---
-title: "Install"
+title: "Installation"
 weight: 2
 ---
 
@@ -15,4 +15,12 @@ cargo install ftc
 
 This installs [ftc](https://crates.io/crates/ftc), the compiler and renderer front-end for Forged Thoughts. You can now invoke *ftc* in your terminal.
 
-By default *ftc* will load, compile and render the *main.ft* file located in the current directory. For further usage information please see the next chapter.
+If you want to update *ftc* to the latest version just enter the above terminal command again.
+
+## Usage
+
+Invoking *ftc* without any arguments will load, compile and render the *main.ft* file in the current directory.
+
+You can change the input file with the ```input``` command or polygonize the input (instead of rendering it) via the ```polygonize``` command (see [Polygonization](../../rendering/polygonization/)).
+
+Use ```--help``` to display all available commands.
