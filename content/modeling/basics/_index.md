@@ -32,7 +32,7 @@ sphere1 -= sphere2;
 
 Would subtract sphere2 from sphere1.
 
-![Sphere](cut_sphere.png)
+![Sphere](subtraction.png)
 
 In this case *sphere2* will not be rendered anymore as a standalone top-level object. However you can use *sphere2* by modifying it and subtracting or adding it to other objects.
 
@@ -48,6 +48,6 @@ let sphere3 = sphere2.copy();
 
 The copy will be a top-level object again and therefore be rendered.
 
-![Sphere](copy.png)
+![Sphere](addition.png)
 
 When you copy an object, all existing boolean operations on that object will also be copied!
