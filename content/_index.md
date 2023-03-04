@@ -5,8 +5,6 @@ title = "Forged Thoughts"
 
 Forged Thoughts is a modeling and rendering *programming* language. It is open source under the MIT license and currently in early development. The language utilizes 3D and 2D SDFs and is written in Rust and can be easily [installed](basics/installation) as a Rust subcommand.
 
-![pic](main.png)
-
 Forged Thoughts strives to create high-quality distance field models for rendering and poligonization. It utilizes multi-threaded CPU based rendering in 64-bit to prevent the limitations of SDFs on the GPU. The focus is on quality, rather than speed.
 
 # Features
@@ -44,7 +42,7 @@ The overall project goals are:
 
 | Addition                       | Addition Smooth               |
 |--------------------------------|-------------------------------|
-|![Addidion](addition.png?width=20vw)| ![Addition Smooth](addition_smooth.png?width=20vw)    |
+|![Addition](addition.png?width=20vw)| ![Addition Smooth](addition_smooth.png?width=20vw)    |
 | Addition Groove                    | Subtraction                      |
 |![Subtraction](addition_groove.png?width=20vw)|   ![Subtraction](subtraction.png?width=20vw)
 | Subtraction Smooth                   | Subtraction Groove                     |
@@ -52,7 +50,21 @@ The overall project goals are:
 | Intersection                   | Intersection Smooth                     |
 |![Intersection](intersection.png?width=20vw)|   ![Intersection Smooth](intersection_smooth.png?width=20vw)
 
+## Current Merging Functions
+
+| smin                       |                |
+|--------------------------------|-------------------------------|
+|![SMin](smin.png?width=20vw)|    |
+
+## Current Modifier
+
+| Twist                       | Mirroring               |
+|--------------------------------|-------------------------------|
+|![Twist](twist.png?width=20vw)| ![Mirroring](mirror.png?width=20vw)    |
+
 # Example
+
+![pic](main.png)
 
 The above helmet was created with the following code:
 

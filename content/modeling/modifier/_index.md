@@ -14,8 +14,12 @@ You can twist a shape around an axis using it's twist property.
 For example
 
 ```rust
-let box = Box(F3(0.5, 1.5, 0.5));
-box.twist.y = 1.0;
+let prim = Box(F3(0.3, 1.0, 0.3));
+
+prim.material.rgb = F3(1.0, 0.186, 0.0);
+prim.material.roughness = 0.3;
+
+prim.twist.y = 2.0;
 
 settings.step_size = 0.5;
 ```
@@ -35,7 +39,7 @@ For example
 ```rust
 let sphere = Sphere();
 
-sphere.position.x += 0.5;
+sphere.position.x += 0.6;
 sphere.mirror.x = true;
 ```
 
