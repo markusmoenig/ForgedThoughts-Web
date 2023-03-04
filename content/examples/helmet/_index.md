@@ -5,7 +5,7 @@ weight: 1
 
 ![Helmet](../../main.png)
 
-See the full source code [here](https://github.com/markusmoenig/ForgedThoughts/blob/master/examples/helmet/main.ft).
+See the full source code [here](https://github.com/markusmoenig/ForgedThoughts/blob/master/examples/helmet.ft).
 
 ```rust
 // Main shape - We make a smooth blend between a sphere and a cone

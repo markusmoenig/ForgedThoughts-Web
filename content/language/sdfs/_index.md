@@ -52,8 +52,6 @@ v.normal = F3(0.0, 1.0, 0,0);           // Changing the normal and offset manual
 v.offset = -1.0;
 ```
 
-![Plane](plane.png)
-
 ### Box
 
 ```rust
