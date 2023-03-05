@@ -46,3 +46,27 @@ sphere.mirror.x = true;
 will mirror the sphere at the x-axis. ```sphere.mirror``` is ```B3```, a vector of 3 booleans.
 
 ![Mirror](mirror.png)
+
+## Max
+
+You can specify as maximum value for the shape for each of the x, y and z axis.
+
+```rust
+sphere.max.x = 0.0;
+```
+
+![Max](max.png)
+
+## Onion
+
+The onion value hollows the shape with the onion value defining the border thickness.
+
+```rust
+sphere.onion = 0.05;
+sphere.max.z = 0.0;
+```
+
+We also set a max value to the z-axis so that we can see the inside of the sphere.
+
+![Onion](onion.png)
+

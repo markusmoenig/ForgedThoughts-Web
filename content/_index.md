@@ -62,6 +62,10 @@ The overall project goals are:
 |--------------------------------|-------------------------------|
 |![Twist](twist.png?width=20vw)| ![Mirroring](mirror.png?width=20vw)    |
 
+| Max                       | Onion               |
+|--------------------------------|-------------------------------|
+|![Max](max.png?width=20vw)| ![Mirroring](onion.png?width=20vw)    |
+
 # Example
 
 ![pic](main.png)
