@@ -30,43 +30,58 @@ The overall project goals are:
 * Terrain (TODO)
 * Physics (TODO)
 
-## Current 3D SDF Primitives
+# Examples
 
-| Sphere                         | Box                           |
-|--------------------------------|-------------------------------|
-|![Sphere](sphere.png?width=20vw)| ![Box](box.png?width=20vw)    |
-| Cone / CappedCone              | Ellipsoid                     |
-|![Cone](cone.png?width=20vw)|   ![Box](ellipsoid.png?width=20vw)
+#### Wine Glass
 
-## Current Booleans
+![Wine Glass](../../wine_glass.png)
 
-| Addition                       | Addition Smooth               |
-|--------------------------------|-------------------------------|
-|![Addition](addition.png?width=20vw)| ![Addition Smooth](addition_smooth.png?width=20vw)    |
-| Addition Groove                    | Subtraction                      |
-|![Subtraction](addition_groove.png?width=20vw)|   ![Subtraction](subtraction.png?width=20vw)
-| Subtraction Smooth                   | Subtraction Groove                     |
-|![Subtraction Smooth](subtraction_smooth.png?width=20vw)|   ![Subtraction Groove](subtraction_groove.png?width=20vw)
-| Intersection                   | Intersection Smooth                     |
-|![Intersection](intersection.png?width=20vw)|   ![Intersection Smooth](intersection_smooth.png?width=20vw)
+The modeling of the glass, except the materials, is just 9 lines.
 
-## Current Merging Functions
+```rust
+// Glass
 
-| smin                       |                |
-|--------------------------------|-------------------------------|
-|![SMin](smin.png?width=20vw)|    |
+let glass = Cone(0.6, 0.7, 0.6);
+glass.rounding = 0.2;
 
-## Current Modifier
+glass.material.rgb = F3(1.0, 1.0, 1.0);
+glass.material.roughness = 0.0;
+glass.material.transmission = 1.0;
+glass.material.ior = 1.50;
 
-| Twist                       | Mirroring               |
-|--------------------------------|-------------------------------|
-|![Twist](twist.png?width=20vw)| ![Mirroring](mirror.png?width=20vw)    |
+let interior = glass.copy();
+interior.scale = 0.96;
 
-| Max                       | Onion               |
-|--------------------------------|-------------------------------|
-|![Max](max.png?width=20vw)| ![Mirroring](onion.png?width=20vw)    |
+// Fluid
 
-# Example
+let fluid = interior.copy();
+fluid.material.rgb = F3("722F37").to_linear();
+fluid.material.transmission = 1.0;
+fluid.material.roughness = 0.5;
+fluid.material.ior = 1.3443705; // Red Wine
+fluid.material.clearcoat_gloss = 1.0;
+fluid.material.sheen = 1.0;
+fluid.material.sheen_tint = 1.0;
+fluid.max.y = 0.0;
+
+glass -= interior;
+
+// Top: Smooth Cut Off & Gold Rim
+
+let box = Box();
+box.material.rgb = F3("d4af37");
+box.material.metallic = 1.0;
+box.material.roughness = 0.2;
+box.position.y = 1.5;
+
+// Smoothly subtract the box from the glass
+glass -= Smooth(box, 0.01);
+
+// Create a groove with the gold material of the box
+glass += Groove(box, 0.001, 0.07);
+```
+
+#### Helmet
 
 ![pic](main.png)
 
@@ -123,6 +138,42 @@ stripe.position.y = 0.16;
 stripe.position.z = 0.2;
 helmet += Groove(stripe, 0.01, 0.02);
 ```
+
+## Current 3D SDF Primitives
+
+| Sphere                         | Box                           |
+|--------------------------------|-------------------------------|
+|![Sphere](sphere.png?width=20vw)| ![Box](box.png?width=20vw)    |
+| Cone / CappedCone              | Ellipsoid                     |
+|![Cone](cone.png?width=20vw)|   ![Box](ellipsoid.png?width=20vw)
+
+## Current Booleans
+
+| Addition                       | Addition Smooth               |
+|--------------------------------|-------------------------------|
+|![Addition](addition.png?width=20vw)| ![Addition Smooth](addition_smooth.png?width=20vw)    |
+| Addition Groove                    | Subtraction                      |
+|![Subtraction](addition_groove.png?width=20vw)|   ![Subtraction](subtraction.png?width=20vw)
+| Subtraction Smooth                   | Subtraction Groove                     |
+|![Subtraction Smooth](subtraction_smooth.png?width=20vw)|   ![Subtraction Groove](subtraction_groove.png?width=20vw)
+| Intersection                   | Intersection Smooth                     |
+|![Intersection](intersection.png?width=20vw)|   ![Intersection Smooth](intersection_smooth.png?width=20vw)
+
+## Current Merging Functions
+
+| smin                       |                |
+|--------------------------------|-------------------------------|
+|![SMin](smin.png?width=20vw)|    |
+
+## Current Modifier
+
+| Twist                       | Mirroring               |
+|--------------------------------|-------------------------------|
+|![Twist](twist.png?width=20vw)| ![Mirroring](mirror.png?width=20vw)    |
+
+| Max                       | Onion               |
+|--------------------------------|-------------------------------|
+|![Max](max.png?width=20vw)| ![Mirroring](onion.png?width=20vw)    |
 
 # License
 

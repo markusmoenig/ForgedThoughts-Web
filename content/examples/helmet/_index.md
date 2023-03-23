@@ -1,6 +1,6 @@
 ---
 title: "Helmet"
-weight: 1
+weight: 2
 ---
 
 ![Helmet](../../main.png)
