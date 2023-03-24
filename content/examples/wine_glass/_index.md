@@ -7,7 +7,7 @@ weight: 1
 
 See the full source code [here](https://github.com/markusmoenig/ForgedThoughts/blob/master/examples/wine_glass.ft).
 
-The modeling of the glass, except the materials, is just 9 lines.
+The modeling of the glass, except the materials, is just 10 lines.
 
 ```rust
 // Glass
@@ -26,6 +26,7 @@ interior.scale = 0.96;
 // Fluid
 
 let fluid = interior.copy();
+fluid.scale -= 0.0002;
 fluid.material.rgb = F3("722F37").to_linear();
 fluid.material.transmission = 1.0;
 fluid.material.roughness = 0.5;
