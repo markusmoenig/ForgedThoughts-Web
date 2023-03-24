@@ -30,7 +30,6 @@ v.visible = false;                      // Mark an SDF as invisible
 
 ## Available 3D SDFs
 
-
 ### Sphere
 
 ```rust
@@ -40,7 +39,7 @@ let v = Sphere(1.5);                    // Create a sphere with a custom radius
 v.radius = 1.2;                         // Change the radius later
 ```
 
-![Sphere](sphere.png)
+![Sphere](../../sphere.png)
 
 ### Plane
 
@@ -58,24 +57,24 @@ v.offset = -1.0;
 // Box
 let v = Box();                          // Create a box with a size of F3(1.0, 1.0, 1.0)
 let v = Box(F3(1.0, 2.0, 3.0));         // Create a box with a custom size
-v.size.x += 2.0;                        // Change the size later
+v.size.x += 2.0;                        // Changing the size manually
 ```
 
-![Plane](box.png)
+![Plane](../../box.png)
 
 ### Cone / CappedCone
 
 ```rust
 // Cone or CappedCone
-// Defined by it's height and the radius of the bottom (r1) and top (r2).
-let v = Cone();                         // Cone of height 1.0 and r1 = 1.0 and r2 = 0.0
-let v = Cone(2.0, 1.5, 0.5);            // Cone of height 2.0 and r1 = 1.5 and r2 = 0.5
-v.height = 0.5;                         // Changing values later
-v1.r1 = 0.8;
-v.r2 = 0.1;
+// Defined by it's height and the radius of the bottom (lower_radius) and top (upper_radius).
+let v = Cone();                         // Cone of height 1.0 and lower_radius = 1.0 and upper_radius = 0.0
+let v = Cone(2.0, 1.5, 0.5);            // Cone of height 2.0 and lower_radius = 1.5 and upper_radius = 0.5
+v.height = 0.5;                         // Changing values manually
+v.lower_radius = 0.8;
+v.upper_radius = 0.1;
 ```
 
-![Cone](cone.png)
+![Cone](../../cone.png)
 
 ### Ellipsoid
 
@@ -83,7 +82,33 @@ v.r2 = 0.1;
 // Ellipsoid
 let v = Ellipsoid();                    // Create an ellipsoid with a size of F3(1.0, 0.5, 0.5)
 let v = Ellipsoid(F3(0.5, 0.2, 0.2));   // Create an ellipsoid with a custom size
-v.size.x += 2.0;                        // Change the size later
+v.size.x += 2.0;                        // Changing the size manually
 ```
 
-![Ellipsoid](ellipsoid.png)
+![Ellipsoid](../../ellipsoid.png)
+
+### Torus
+
+```rust
+// Torus
+// Defined by a radius and a ring_radius
+let v = Torus();                        // radius of 0.7 and ring_radius of 0.3
+let v = Torus(0.6, 0.2)                 // radius of 0.6 and a ring_radius of 0.2
+v.radius = 0.6;                         // Changing values manually
+v.ring_radius = 0.2;
+```
+
+![Torus](../../torus.png)
+
+### Cylinder
+
+```rust
+// Cylinder
+// Defined by a height and a radius
+let v = Cylinder();                     // height of 1.0 and radius of 0.5
+let v = Cylinder(0.6, 0.2)              // height of 0.6 and a radius of 0.2
+v.height = 0.6;                         // Changing values manually
+v.radius = 0.2;
+```
+
+![Torus](../../cylinder.png)

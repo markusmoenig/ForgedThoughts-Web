@@ -146,7 +146,9 @@ helmet += Groove(stripe, 0.01, 0.02);
 |--------------------------------|-------------------------------|
 |![Sphere](sphere.png?width=20vw)| ![Box](box.png?width=20vw)    |
 | Cone / CappedCone              | Ellipsoid                     |
-|![Cone](cone.png?width=20vw)|   ![Box](ellipsoid.png?width=20vw)
+|![Cone](cone.png?width=20vw)    |![Box](ellipsoid.png?width=20vw)|
+| Torus                          | Cylinder                      |
+|![Torus](torus.png?width=20vw)  |![Cylinder](cylinder.png?width=20vw)|
 
 ## Current Booleans
 
