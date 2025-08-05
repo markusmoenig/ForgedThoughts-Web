@@ -3,6 +3,10 @@ archetype = "home"
 title = "Forged Thoughts"
 +++
 
+[Shape-Z.com](http://shape-z.com) is the successor of Forged Thoughts. Please check it out instead.
+
+---
+
 Forged Thoughts is a modeling and rendering *programming* language. It is open source under the MIT license and currently in early development. The language utilizes 3D and 2D SDFs and is written in Rust and can be easily [installed](basics/installation) as a Rust subcommand.
 
 Forged Thoughts strives to create high-quality distance field models for rendering and poligonization. It utilizes multi-threaded CPU based rendering in 64-bit to prevent the limitations of SDFs on the GPU. The focus is on quality, rather than speed.
